@@ -68,3 +68,22 @@ from .tupu_api import TUPU
 tupu_client = TUPU(secret_id, private_key_path, url)
 ```
 private_key_path需要有了账号，生成了公钥、私钥才能拿到，这个步骤还是挺繁琐的，而且接口定向。
+
+
+# 码隆科技
+
+SDK-py文档写的比较完整，果然业界良心，[github地址](https://github.com/MalongTech/productai-python-sdk)。
+这边估计最不人性化的就是，图像需要url化，不能本地图片直接检测，这个比较尴尬。。。
+```
+pip install productai
+```
+这边我尝试了衣物识别的相关内容。
+```
+from productai import Client
+
+cli = Client(access_key_id, access_key_secret)
+api = cli.get_api('detect', '_0000025')
+```
+关于'detect', '_0000025'，需要在官网查找对应接口的内容。
+
+

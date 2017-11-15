@@ -52,3 +52,19 @@ api.detect(image_file = File(r"C:/Desktop/1.jpg"),return_landmark = 1，return_a
  - face++很大方，申请了的试用账号就可以有很多功能可以使用，每个用户使用免费服务只能创建 1000个 FaceSet，总计最多存储 100 万个人脸。
  - 最多返回5个数据点，5长脸
 
+# 图普科技
+接口很酷炫，但是这sdk文档，真是简陋...而且API输出内容比较复杂，麻烦。
+接口是定向指定的，需要跟tupu事先沟通好才能试用，[官网接口介绍](https://www.tuputech.com/api/tasks)有一些是旧的，需要先问问。
+github下载路径：https://github.com/tuputech/tupu-python-sdk
+
+github下载之后，需要加一个__init__.py文件，如下内容，才能正常调用：
+```
+from .tupu_api import TUPU
+```
+
+主函数：
+
+```
+tupu_client = TUPU(secret_id, private_key_path, url)
+```
+private_key_path需要有了账号，生成了公钥、私钥才能拿到，这个步骤还是挺繁琐的，而且接口定向。

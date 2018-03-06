@@ -53,7 +53,7 @@ except urllib2.HTTPError as e:
 # -------------------Part 1 : 人脸识别第二种方式：SDK调用方式 ----------------------------
 
 import sys
-sys.path.append(u'C:\\Users\\mzheng50\\Desktop\\百度API\\face++\\python-sdk-master\\python-sdk')
+sys.path.append(u'/.../python-sdk-master/python-sdk')
 from facepp import API, File
 
 

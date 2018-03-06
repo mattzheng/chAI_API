@@ -72,7 +72,7 @@ api.detect(image_file = File(r"C:/Desktop/1.jpg"))
 
 # -------------------Part 2: face++ 场景识别 + 人体语义分割 + OCR识别---------------------------
 import sys
-sys.path.append('/data1/research/matt/face++/python-sdk')
+sys.path.append('/../face++/python-sdk')
 from facepp import API, File
 import urllib2,time
 
@@ -134,7 +134,7 @@ if __name__ == "__main__"
 	API_KEY = "xxx"
 	API_SECRET = "xxx"
 	#face_one = 'http://bj-mc-prod-asset.oss-cn-beijing.aliyuncs.com/mc-official/images/face/demo-pic11.jpg'
-	face_two = '/data1/research/matt/face++/out2.jpg'
+	face_two = '/../out2.jpg'
 	result = faceplus_api( API_KEY,API_SECRET, face_two ,http_url)
 
 	# OCR识别
@@ -142,7 +142,7 @@ if __name__ == "__main__"
 	API_KEY = "xxx"
 	API_SECRET = "xxx"
 	#face_one = 'http://bj-mc-prod-asset.oss-cn-beijing.aliyuncs.com/mc-official/images/face/demo-pic11.jpg'
-	face_two = '/data1/research/matt/face++/out3.jpg'
+	face_two = '/../out3.jpg'
 	ocr_result = faceplus_api( API_KEY,API_SECRET, face_two ,http_url) 
 	print ocr_result
 

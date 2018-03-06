@@ -10,7 +10,7 @@ import urllib
 import time
 http_url='https://api-cn.faceplusplus.com/facepp/v3/detect'  # 人脸检测
 
-#  -------------------第一种方式：post方式 -------------------
+#  -------------------Part 1 : 人脸识别 第一种方式：post方式 -------------------
 
 key = "xxx"
 secret = "xxx"
@@ -50,7 +50,7 @@ except urllib2.HTTPError as e:
 
 
 
-# -------------------第二种方式：SDK调用方式 ----------------------------
+# -------------------Part 1 : 人脸识别第二种方式：SDK调用方式 ----------------------------
 
 import sys
 sys.path.append(u'C:\\Users\\mzheng50\\Desktop\\百度API\\face++\\python-sdk-master\\python-sdk')
@@ -70,7 +70,7 @@ api = API(key, secret , srv = 'https://api-cn.faceplusplus.com/humanbodypp/v1/de
 api.detect(image_file = File(r"C:/Desktop/1.jpg"))
 
 
-# -------------------face++ 场景识别 + 人体语义分割 + OCR识别---------------------------
+# -------------------Part 2: face++ 场景识别 + 人体语义分割 + OCR识别---------------------------
 import sys
 sys.path.append('/data1/research/matt/face++/python-sdk')
 from facepp import API, File

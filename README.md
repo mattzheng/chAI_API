@@ -32,6 +32,34 @@ sys.path.append(u'../face++/python-sdk-master/python-sdk')
 from facepp import API, File
 ```
 
+这边我新加了场景识别、人体语义分割和OCR识别技术的使用。（——20180306）
+```
+	# 场景识别
+	http_url='https://api-cn.faceplusplus.com/imagepp/beta/detectsceneandobject'
+	API_KEY = "xxx"
+	API_SECRET = "xxx"
+	face_one = 'http://bj-mc-prod-asset.oss-cn-beijing.aliyuncs.com/mc-official/images/face/demo-pic11.jpg'
+	face_two = '/../Hydrangeas.jpg'
+	result = faceplus_api( API_KEY,API_SECRET, face_two ,http_url)
+	
+	# 人体语义分割
+	http_url='https://api-cn.faceplusplus.com/humanbodypp/v1/segment'
+	API_KEY = "xxx"
+	API_SECRET = "xxx"
+	#face_one = 'http://bj-mc-prod-asset.oss-cn-beijing.aliyuncs.com/mc-official/images/face/demo-pic11.jpg'
+	face_two = '/../out2.jpg'
+	result = faceplus_api( API_KEY,API_SECRET, face_two ,http_url)
+
+	# OCR识别
+	http_url='https://api-cn.faceplusplus.com/imagepp/v1/recognizetext'
+	API_KEY = "xxx"
+	API_SECRET = "xxx"
+	#face_one = 'http://bj-mc-prod-asset.oss-cn-beijing.aliyuncs.com/mc-official/images/face/demo-pic11.jpg'
+	face_two = '/../out3.jpg'
+	ocr_result = faceplus_api( API_KEY,API_SECRET, face_two ,http_url) 
+	print ocr_result
+```
+
 #### 人脸检测 + 人体姿势检测
 api.detect(）是主要调用函数，其中的相关参数[参考链接](https://console.faceplusplus.com.cn/documents/4888373)
 

@@ -19,9 +19,12 @@ pip install oss2
 face++的python的SDK简直了，文档几乎为0，只有内容，没有pip 。这边测试的是人脸识别以及人体姿势识别两个接口。
 
 #### SDK加载
-下载链接：https://github.com/FacePlusPlus/python-sdk
+下载链接：https://github.com/FacePlusPlus/facepp-python-sdk
+
 直接调用里面的文件内容即可。
+
 如果不想麻烦放在默认路径，可以自己加一下存放python-sdk的路径
+
 ```
 import sys
 sys.path.append(u'../face++/python-sdk-master/python-sdk')
